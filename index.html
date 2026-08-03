@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
 
 <title>ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️</title>
 
-<meta name="theme-color" content="#001b2f">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,73 +15,138 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins,sans-serif;
+-webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+width:100%;
+height:100%;
+overflow:hidden;
+background:#070707;
+color:#fff;
 }
 
 body{
 
 background:
-linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.75)),
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
 url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1400&q=80");
 
 background-size:cover;
 background-position:center;
-background-attachment:fixed;
-overflow-x:hidden;
-color:white;
+background-repeat:no-repeat;
 
 }
 
-body::before{
+body:before{
 
 content:"";
+
 position:fixed;
+
 left:0;
 top:0;
+
 width:100%;
 height:100%;
-background:linear-gradient(45deg,#00e5ff22,#0088ff11,#00e5ff22);
-animation:bgmove 10s linear infinite;
+
+background:
+radial-gradient(circle at top,#ff000025,transparent 35%),
+radial-gradient(circle at bottom,#ffd00018,transparent 35%),
+radial-gradient(circle at center,#00d9ff18,transparent 40%);
+
+animation:bgMove 10s linear infinite;
+
 z-index:-1;
 
 }
 
-@keyframes bgmove{
-
-0%{transform:translateX(-5%)}
-50%{transform:translateX(5%)}
-100%{transform:translateX(-5%)}
-
-}
-
-.container{
-
-max-width:430px;
-margin:auto;
-padding:15px;
-
-}
-
-.logo{
-
-width:110px;
-height:110px;
-display:block;
-margin:20px auto;
-border-radius:50%;
-border:4px solid #00e5ff;
-box-shadow:0 0 40px cyan;
-animation:pulse 2s infinite;
-
-}
-
-@keyframes pulse{
+@keyframes bgMove{
 
 50%{
 
 transform:scale(1.08);
 
-box-shadow:0 0 60px cyan;
+}
+
+}
+
+.wrapper{
+
+width:100%;
+max-width:430px;
+height:100vh;
+
+margin:auto;
+
+padding:14px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.glass{
+
+width:100%;
+
+padding:20px;
+
+border-radius:28px;
+
+background:rgba(0,0,0,.45);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(16px);
+
+box-shadow:
+
+0 0 40px rgba(255,0,0,.18),
+
+0 0 70px rgba(255,208,0,.12);
+
+text-align:center;
+
+}
+
+.logo{
+
+width:105px;
+
+height:105px;
+
+border-radius:50%;
+
+border:4px solid gold;
+
+box-shadow:
+
+0 0 18px gold,
+
+0 0 40px red;
+
+animation:logoPulse 2s infinite;
+
+object-fit:cover;
+
+}
+
+@keyframes logoPulse{
+
+50%{
+
+transform:scale(1.07);
+
+box-shadow:
+
+0 0 25px gold,
+
+0 0 60px red;
 
 }
 
@@ -90,60 +154,258 @@ box-shadow:0 0 60px cyan;
 
 .title{
 
-text-align:center;
-font-size:31px;
+margin-top:15px;
+
+font-size:28px;
+
 font-weight:800;
-color:#00e5ff;
-text-shadow:0 0 20px cyan;
+
+line-height:1.2;
+
+color:#fff;
+
+text-shadow:
+
+0 0 10px #fff,
+
+0 0 20px red,
+
+0 0 35px gold;
 
 }
 
 .subtitle{
 
-text-align:center;
-margin-top:10px;
+margin-top:8px;
+
+font-size:13px;
+
 color:#ddd;
-font-size:14px;
+
+line-height:1.6;
 
 }
 
-.notice{
+.online{
 
-margin-top:20px;
-padding:12px;
-background:rgba(255,255,255,.08);
-border:1px solid cyan;
-border-radius:15px;
-backdrop-filter:blur(12px);
-text-align:center;
-font-size:14px;
-box-shadow:0 0 25px rgba(0,255,255,.25);
+margin:18px auto 0;
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:10px 18px;
+
+border-radius:40px;
+
+background:#101010;
+
+border:1px solid gold;
 
 }
 
-.countBox{
+.dot{
+
+width:10px;
+height:10px;
+
+background:#00ff66;
+
+border-radius:50%;
+
+animation:blink 1s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:.3;
+
+}
+
+}
+
+.counter{
 
 margin-top:18px;
-padding:15px;
-border-radius:15px;
-text-align:center;
-background:rgba(255,255,255,.08);
-border:1px solid cyan;
-font-size:20px;
-font-weight:bold;
-box-shadow:0 0 20px rgba(0,255,255,.3);
+
+font-size:25px;
+
+font-weight:700;
 
 }
+
+.counter span{
+
+color:#ffd700;
+
+}
+
+.joinBtn{
+
+display:block;
+
+margin-top:22px;
+
+padding:18px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-size:20px;
+
+font-weight:700;
+
+color:#111;
+
+background:linear-gradient(90deg,#ffd700,#ff9800);
+
+box-shadow:
+
+0 0 18px gold,
+
+0 0 35px orange;
+
+animation:joinGlow 1.3s infinite alternate;
+
+}
+
+@keyframes joinGlow{
+
+to{
+
+transform:scale(1.05);
+
+box-shadow:
+
+0 0 35px gold,
+
+0 0 60px orange;
+
+}
+
+}
+
+.countdown{
+
+margin-top:12px;
+
+font-size:14px;
+
+color:#ddd;
+
+}
+
+@media(max-width:420px){
+
+.logo{
+
+width:90px;
+height:90px;
+
+}
+
+.title{
+
+font-size:24px;
+
+}
+
+.joinBtn{
+
+font-size:18px;
+
+padding:16px;
+
+}
+
+.counter{
+
+font-size:22px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="glass">
+
+<!-- Replace src with your uploaded logo if hosted locally -->
+<img class="logo"
+src="logo.png"
+alt="Jagannath Tips Logo">
+
+<div class="title">
+ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️
+</div>
+
+<div class="subtitle">
+Premium Cricket Community<br>
+Match • Toss • Session • Live Updates
+</div>
+
+<div class="online">
+
+<div class="dot"></div>
+
+<span id="onlineCount">
+1,284 Online
+</span>
+
+</div>
+
+<div class="counter">
+
+<span id="members">
+68,254
+</span> Members
+
+</div>
+
+<a class="joinBtn"
+href="https://t.me/+uWimtN5undEyYjBl">
+
+🚀 JOIN TELEGRAM
+
+</a>
+
+<div class="countdown">
+
+Redirecting in
+<b id="timer">25</b>s
+
+</div>
+<!-- ========================= -->
+<!-- PART 2 - Cricket Content -->
+<!-- Paste below Part 1 -->
+<!-- ========================= -->
+
+<style>
+
+/* ===== Live Ticker ===== */
 
 .ticker{
 
 margin-top:18px;
+width:100%;
 overflow:hidden;
-border-radius:15px;
-background:#00c8ff;
-color:#000;
-font-weight:bold;
-padding:12px;
+border-radius:14px;
+background:linear-gradient(90deg,#ff0000,#ff9900,#ffd700);
+padding:10px 0;
+
+box-shadow:0 0 18px rgba(255,180,0,.5);
 
 }
 
@@ -152,660 +414,549 @@ padding:12px;
 display:inline-block;
 white-space:nowrap;
 padding-left:100%;
+font-size:13px;
+font-weight:700;
+color:#111;
 animation:ticker 18s linear infinite;
 
 }
 
 @keyframes ticker{
 
-0%{
-
-transform:translateX(0);
-
-}
-
-100%{
-
-transform:translateX(-200%);
+0%{transform:translateX(0);}
+100%{transform:translateX(-200%);}
 
 }
 
-}
+/* ===== Cricket Grid ===== */
 
 .grid{
 
 margin-top:20px;
+
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:10px;
+
+width:100%;
 
 }
 
-.card{
+.box{
 
 background:rgba(255,255,255,.08);
 
-border:1px solid rgba(0,255,255,.35);
-
-border-radius:16px;
-
-padding:16px 10px;
-
-text-align:center;
-
-backdrop-filter:blur(10px);
-
-box-shadow:0 0 18px rgba(0,255,255,.18);
-
-transition:.4s;
-
-}
-
-.card:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 0 35px cyan;
-
-}
-
-.card h3{
-
-color:#00e5ff;
-
-margin-bottom:6px;
-
-font-size:17px;
-
-}
-
-.card p{
-
-font-size:12px;
-
-color:#f0f0f0;
-
-}
-
-.joinBtn{
-
-display:block;
-
-margin:28px auto;
-
-width:92%;
-
-text-align:center;
-
-padding:18px;
-
-font-size:21px;
-
-font-weight:700;
-
-text-decoration:none;
-
-border-radius:60px;
-
-background:#00e5ff;
-
-color:#000;
-
-box-shadow:0 0 35px cyan;
-
-animation:glow 1s infinite alternate;
-
-}
-
-@keyframes glow{
-
-from{
-
-transform:scale(1);
-
-}
-
-to{
-
-transform:scale(1.05);
-
-box-shadow:0 0 60px cyan;
-
-}
-
-}
-
-.telegram{
-
-text-align:center;
-
-margin-top:18px;
-
-font-size:16px;
-
-}
-
-.telegram a{
-
-color:#00e5ff;
-
-font-weight:bold;
-
-text-decoration:none;
-
-}
-
-.countdown{
-
-margin-top:18px;
-
-text-align:center;
-
-font-size:18px;
-
-font-weight:bold;
-
-color:#00e5ff;
-
-}
-
-.footer{
-
-margin-top:30px;
-
-text-align:center;
-
-font-size:12px;
-
-color:#ccc;
-
-padding-bottom:25px;
-
-}
-
-.popup{
-
-position:fixed;
-
-left:50%;
-
-bottom:20px;
-
-transform:translateX(-50%);
-
-background:#041d2d;
-
-border:1px solid cyan;
+border:1px solid rgba(255,215,0,.35);
 
 border-radius:15px;
 
-padding:12px 18px;
+padding:12px 5px;
 
-display:none;
+text-align:center;
 
-box-shadow:0 0 30px cyan;
+transition:.35s;
 
-font-size:14px;
+backdrop-filter:blur(12px);
 
-z-index:999;
-
-}
-
-.particle{
-
-position:fixed;
-
-width:5px;
-
-height:5px;
-
-background:#00e5ff;
-
-border-radius:50%;
-
-opacity:.4;
-
-animation:float 10s linear infinite;
+box-shadow:0 0 12px rgba(255,215,0,.15);
 
 }
 
-@keyframes float{
+.box:hover{
 
-0%{
+transform:translateY(-5px);
 
-transform:translateY(110vh);
+border-color:#ffd700;
 
-}
-
-100%{
-
-transform:translateY(-100px);
+box-shadow:0 0 25px gold;
 
 }
 
-}
+.icon{
 
-@media(max-width:430px){
+font-size:24px;
 
-.title{
-
-font-size:27px;
+margin-bottom:8px;
 
 }
 
-.joinBtn{
+.label{
 
-font-size:19px;
+font-size:11px;
+
+font-weight:700;
+
+letter-spacing:.4px;
+
+}
+
+/* ===== Stats ===== */
+
+.stats{
+
+margin-top:18px;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:10px;
+
+}
+
+.stat{
+
+padding:14px;
+
+border-radius:16px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+text-align:center;
+
+}
+
+.stat h3{
+
+font-size:24px;
+
+color:#ffd700;
+
+}
+
+.stat p{
+
+font-size:12px;
+
+margin-top:4px;
+
+color:#ddd;
+
+}
+
+/* ===== Feature Strip ===== */
+
+.features{
+
+margin-top:18px;
+
+display:flex;
+
+justify-content:space-between;
+
+gap:8px;
+
+flex-wrap:wrap;
+
+}
+
+.tag{
+
+flex:1 1 45%;
+
+padding:10px;
+
+font-size:12px;
+
+text-align:center;
+
+border-radius:12px;
+
+background:#111;
+
+border:1px solid rgba(255,215,0,.35);
+
+}
+
+/* ===== Footer ===== */
+
+.footer{
+
+margin-top:20px;
+
+text-align:center;
+
+font-size:11px;
+
+color:#ccc;
+
+line-height:1.8;
+
+}
+
+.footer a{
+
+color:#ffd700;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+/* Mobile */
+
+@media(max-width:420px){
+
+.grid{
+
+gap:8px;
+
+}
+
+.box{
+
+padding:10px 4px;
+
+}
+
+.icon{
+
+font-size:20px;
+
+}
+
+.label{
+
+font-size:10px;
 
 }
 
 }
 
 </style>
-</head>
 
-<body>
-
-<div class="container">
-
-<img class="logo"
-src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Cricket_ball.png">
-
-<div class="title">
-ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️
-</div>
-
-<div class="subtitle">
-Premium Cricket Match Analysis & Live Updates
-</div>
-
-<div class="notice">
-🏏 Join our premium Telegram community for daily cricket insights.
-</div>
-
-<div class="countBox">
-👥 <span id="members">68254</span>+ Active Members
-</div>
+<!-- ===== Live News ===== -->
 
 <div class="ticker">
+
 <div class="tickerText">
-🏏 Match Analysis • Toss Updates • Session Insights • Live Cricket Coverage • Expert Opinions • Join Now
+
+🏏 LIVE • MATCH • TOSS • SESSION • PREMIUM • VIP • FAST • EXPERT • JOIN NOW • OFFICIAL CHANNEL
+
 </div>
+
 </div>
+
+<!-- ===== Cricket Boxes ===== -->
 
 <div class="grid">
 
-<div class="card">
-<h3>🏆 Match</h3>
-<p>Expert match analysis</p>
+<div class="box">
+<div class="icon">🏏</div>
+<div class="label">MATCH</div>
 </div>
 
-<div class="card">
-<h3>🎯 Toss</h3>
-<p>Pre-match insights</p>
+<div class="box">
+<div class="icon">🎯</div>
+<div class="label">TOSS</div>
 </div>
 
-<div class="card">
-<h3>📊 Session</h3>
-<p>Live updates</p>
+<div class="box">
+<div class="icon">📊</div>
+<div class="label">SESSION</div>
 </div>
 
-<div class="card">
-<h3>🔥 Premium</h3>
-<p>Daily cricket coverage</p>
+<div class="box">
+<div class="icon">👑</div>
+<div class="label">VIP</div>
+</div>
+
+<div class="box">
+<div class="icon">⚡</div>
+<div class="label">FAST</div>
+</div>
+
+<div class="box">
+<div class="icon">🔥</div>
+<div class="label">LIVE</div>
+</div>
+
+<div class="box">
+<div class="icon">⭐</div>
+<div class="label">EXPERT</div>
+</div>
+
+<div class="box">
+<div class="icon">💎</div>
+<div class="label">PREMIUM</div>
 </div>
 
 </div>
 
-<a class="joinBtn"
-href="https://t.me/+uWimtN5undEyYjBl">
-JOIN TELEGRAM
-</a>
+<!-- ===== Stats ===== -->
 
-<div class="telegram">
-Telegram:
-<a href="https://t.me/+uWimtN5undEyYjBl">
-@JagannathTips
-</a>
+<div class="stats">
+
+<div class="stat">
+
+<h3 id="memberCount">68,254+</h3>
+
+<p>Active Members</p>
+
 </div>
 
-<div class="countdown">
-Redirecting in <span id="timer">25</span>s
+<div class="stat">
+
+<h3 id="onlineNow">1,284</h3>
+
+<p>Online Now</p>
+
 </div>
+
+</div>
+
+<!-- ===== Feature Tags ===== -->
+
+<div class="features">
+
+<div class="tag">🏆 Daily Updates</div>
+
+<div class="tag">🎯 Toss</div>
+
+<div class="tag">📈 Session</div>
+
+<div class="tag">⚡ Fast Alert</div>
+
+</div>
+
+<!-- ===== Footer ===== -->
 
 <div class="footer">
-Powered by Premium Cricket Community
+
+<b>ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️</b>
+
+<br>
+
+<a href="https://t.me/+uWimtN5undEyYjBl">
+
+Official Telegram Channel
+
+</a>
+
+<br>
+
+© 2026 All Rights Reserved
+
 </div>
 
-<div class="popup" id="popup"></div>
+</div>
+
+<!-- Popup -->
+<div id="popup"></div>
+
+<!-- ========================= -->
+<!-- PART 3 - JavaScript -->
+<!-- Paste after Part 2 -->
+<!-- ========================= -->
+
 <script>
 
-//==============================
-// LIVE MEMBER COUNTER
-//==============================
+//==========================
+// MEMBER COUNTER
+//==========================
 
 let members = 68254;
-const memberEl = document.getElementById("members");
 
-setInterval(() => {
+setInterval(()=>{
 
-    members += Math.floor(Math.random() * 4);
+members += Math.floor(Math.random()*3);
 
-    memberEl.innerHTML = members.toLocaleString();
+document.getElementById("members").innerHTML =
+members.toLocaleString();
 
-}, 2200);
+const mc=document.getElementById("memberCount");
+
+if(mc){
+mc.innerHTML=members.toLocaleString()+"+";
+}
+
+},2500);
 
 
-//==============================
-// COUNTDOWN + AUTO REDIRECT
-//==============================
+//==========================
+// ONLINE USERS
+//==========================
 
-let time = 25;
+setInterval(()=>{
 
-const timer = document.getElementById("timer");
+let online=1200+Math.floor(Math.random()*180);
 
-const countdown = setInterval(() => {
+document.getElementById("onlineCount").innerHTML=
+online.toLocaleString()+" Online";
 
-    time--;
+const on=document.getElementById("onlineNow");
 
-    timer.innerHTML = time;
+if(on){
+on.innerHTML=online.toLocaleString();
+}
 
-    if (time <= 0) {
+},3000);
 
-        clearInterval(countdown);
 
-        window.location.href =
-        "https://t.me/+uWimtN5undEyYjBl";
+//==========================
+// COUNTDOWN
+//==========================
 
-    }
+let sec=25;
+
+const timer=document.getElementById("timer");
+
+const countdown=setInterval(()=>{
+
+sec--;
+
+timer.innerHTML=sec;
+
+if(sec<=0){
+
+clearInterval(countdown);
+
+window.location.href=
+"https://t.me/+uWimtN5undEyYjBl";
+
+}
 
 },1000);
 
 
-//==============================
-// FLOATING PARTICLES
-//==============================
+//==========================
+// FAKE JOIN POPUP
+//==========================
 
-for(let i=0;i<45;i++){
+const popup=document.getElementById("popup");
 
-    let p=document.createElement("div");
+popup.style.cssText=`
+position:fixed;
+left:50%;
+bottom:18px;
+transform:translateX(-50%);
+background:#111;
+border:2px solid gold;
+padding:12px 18px;
+border-radius:15px;
+color:#fff;
+font-size:13px;
+display:none;
+z-index:9999;
+box-shadow:0 0 25px gold;
+`;
 
-    p.className="particle";
+const users=[
+"Rahul",
+"Amit",
+"Vikas",
+"Rohit",
+"Ankit",
+"Deepak",
+"Arjun",
+"Vivek",
+"Yash",
+"Nikhil",
+"Abhishek",
+"Sachin",
+"Sumit",
+"Pankaj",
+"Harsh"
+];
 
-    p.style.left=Math.random()*100+"%";
+function showPopup(){
 
-    p.style.width=(3+Math.random()*6)+"px";
+let name=
+users[Math.floor(Math.random()*users.length)];
 
-    p.style.height=p.style.width;
+popup.innerHTML=
+"✅ <b>"+name+"</b> joined Telegram";
 
-    p.style.opacity=Math.random();
+popup.style.display="block";
 
-    p.style.animationDuration=(5+Math.random()*8)+"s";
+popup.animate([
 
-    p.style.animationDelay=(Math.random()*5)+"s";
+{opacity:0,transform:"translate(-50%,40px)"},
 
-    document.body.appendChild(p);
+{opacity:1,transform:"translate(-50%,0px)"}
 
-}
+],{
 
+duration:400,
 
-//==============================
-// JOIN BUTTON EFFECT
-//==============================
+fill:"forwards"
 
-const joinBtn=document.querySelector(".joinBtn");
-
-setInterval(()=>{
-
-joinBtn.style.transform="scale(1.07)";
+});
 
 setTimeout(()=>{
 
-joinBtn.style.transform="scale(1)";
+popup.style.display="none";
 
-},500);
+},2500);
 
-},1400);
+}
+
+setInterval(showPopup,7000);
 
 
-//==============================
-// CARD HOVER ANIMATION
-//==============================
+//==========================
+// FLOATING PARTICLES
+//==========================
 
-const cards=document.querySelectorAll(".card");
+for(let i=0;i<40;i++){
 
-cards.forEach((card,index)=>{
+let p=document.createElement("span");
 
-card.style.animation=
-"cardFloat "+(3+index)+"s ease-in-out infinite";
+p.style.position="fixed";
 
-});
+p.style.left=Math.random()*100+"%";
+
+p.style.top=Math.random()*100+"%";
+
+p.style.width="4px";
+
+p.style.height="4px";
+
+p.style.borderRadius="50%";
+
+p.style.background="gold";
+
+p.style.boxShadow="0 0 12px gold";
+
+p.style.opacity=".5";
+
+p.style.pointerEvents="none";
+
+p.style.animation=
+"float "+(5+Math.random()*8)+"s linear infinite";
+
+document.body.appendChild(p);
+
+}
 
 const style=document.createElement("style");
 
 style.innerHTML=`
 
-@keyframes cardFloat{
+@keyframes float{
 
-0%{transform:translateY(0px);}
+0%{
 
-50%{transform:translateY(-8px);}
+transform:translateY(120vh);
 
-100%{transform:translateY(0px);}
-
-}
-
-`;
-
-document.head.appendChild(style);
-
-
-//==============================
-// TITLE GLOW EFFECT
-//==============================
-
-const title=document.querySelector(".title");
-
-setInterval(()=>{
-
-title.style.textShadow="0 0 35px cyan";
-
-setTimeout(()=>{
-
-title.style.textShadow="0 0 15px cyan";
-
-},700);
-
-},1500);
-
-
-//==============================
-// RANDOM CRICKET NEWS
-//==============================
-
-const news=[
-
-"🏏 Today's featured cricket analysis available now",
-
-"🔥 Live match insights updated regularly",
-
-"🎯 Toss discussion before every match",
-
-"📊 Session updates throughout the game",
-
-"⭐ Join thousands of cricket fans today",
-
-"🏆 Premium cricket community is active"
-
-];
-
-const ticker=document.querySelector(".tickerText");
-
-let newsIndex=0;
-
-setInterval(()=>{
-
-newsIndex++;
-
-if(newsIndex>=news.length){
-
-newsIndex=0;
+opacity:0;
 
 }
 
-ticker.innerHTML=news[newsIndex];
+20%{
 
-},6000);
-
-
-//==============================
-// PAGE FADE-IN
-//==============================
-
-document.body.style.opacity="0";
-
-document.body.style.transition="opacity 1.5s";
-
-window.onload=function(){
-
-document.body.style.opacity="1";
-
-};
-
-</script>
-<script>
-
-// =============================
-// FAKE "SOMEONE JOINED" POPUP
-// =============================
-
-const popup = document.getElementById("popup");
-
-const names = [
-
-"Rahul",
-"Aman",
-"Rohit",
-"Vikas",
-"Deepak",
-"Ankit",
-"Sachin",
-"Abhishek",
-"Sumit",
-"Nikhil",
-"Pankaj",
-"Arjun",
-"Harsh",
-"Shubham",
-"Yash",
-"Vivek",
-"Aditya",
-"Ravi"
-
-];
-
-function randomPopup(){
-
-const person = names[Math.floor(Math.random()*names.length)];
-
-popup.innerHTML =
-"✅ <b>"+person+"</b> joined the Telegram channel.";
-
-popup.style.display="block";
-
-popup.style.opacity="1";
-
-popup.style.transform="translateX(-50%) translateY(0px)";
-
-setTimeout(function(){
-
-popup.style.opacity="0";
-
-popup.style.transform="translateX(-50%) translateY(20px)";
-
-setTimeout(function(){
-
-popup.style.display="none";
-
-},500);
-
-},2800);
+opacity:.7;
 
 }
 
-setInterval(randomPopup,7000);
+100%{
 
-
-// =============================
-// ONLINE USERS EFFECT
-// =============================
-
-const subtitle = document.querySelector(".subtitle");
-
-setInterval(function(){
-
-const online = 800 + Math.floor(Math.random()*400);
-
-subtitle.innerHTML =
-"🟢 "+online+" users online • Premium Cricket Community";
-
-},3000);
-
-
-// =============================
-// BUTTON RIPPLE EFFECT
-// =============================
-
-const button = document.querySelector(".joinBtn");
-
-button.addEventListener("click",function(e){
-
-const circle=document.createElement("span");
-
-const size=Math.max(button.clientWidth,button.clientHeight);
-
-circle.style.width=size+"px";
-circle.style.height=size+"px";
-
-circle.style.position="absolute";
-circle.style.borderRadius="50%";
-circle.style.background="rgba(255,255,255,.45)";
-circle.style.pointerEvents="none";
-circle.style.transform="scale(0)";
-circle.style.animation="ripple .7s linear";
-
-const rect=button.getBoundingClientRect();
-
-circle.style.left=(e.clientX-rect.left-size/2)+"px";
-circle.style.top=(e.clientY-rect.top-size/2)+"px";
-
-button.appendChild(circle);
-
-setTimeout(()=>{
-
-circle.remove();
-
-},700);
-
-});
-
-const ripple=document.createElement("style");
-
-ripple.innerHTML=`
-
-.joinBtn{
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-@keyframes ripple{
-
-to{
-
-transform:scale(4);
+transform:translateY(-120vh);
 
 opacity:0;
 
@@ -815,45 +966,89 @@ opacity:0;
 
 `;
 
-document.head.appendChild(ripple);
+document.head.appendChild(style);
 
 
-// =============================
-// LOGO ROTATION
-// =============================
+//==========================
+// BUTTON GLOW
+//==========================
 
-const logo=document.querySelector(".logo");
+const btn=document.querySelector(".joinBtn");
 
-setInterval(function(){
+setInterval(()=>{
 
-logo.style.transform="rotate(360deg)";
+btn.style.transform="scale(1.05)";
 
-logo.style.transition="1.2s";
+setTimeout(()=>{
 
-setTimeout(function(){
+btn.style.transform="scale(1)";
 
-logo.style.transform="rotate(0deg)";
+},700);
 
-},1300);
-
-},8000);
+},1600);
 
 
-// =============================
-// PAGE TITLE BLINK
-// =============================
+//==========================
+// TITLE BLINK
+//==========================
 
-setInterval(function(){
+setInterval(()=>{
 
 document.title="🏏 ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️";
 
-setTimeout(function(){
+setTimeout(()=>{
 
-document.title="🔥 Join Telegram Now";
+document.title="🔥 JOIN TELEGRAM";
 
 },1000);
 
 },2500);
+
+
+//==========================
+// LOGO ROTATION
+//==========================
+
+const logo=document.querySelector(".logo");
+
+setInterval(()=>{
+
+logo.style.transition="1.2s";
+
+logo.style.transform="rotate(360deg)";
+
+setTimeout(()=>{
+
+logo.style.transform="rotate(0deg)";
+
+},1200);
+
+},8000);
+
+
+//==========================
+// CARD ANIMATION
+//==========================
+
+document.querySelectorAll(".box").forEach((box,i)=>{
+
+box.animate([
+
+{transform:"translateY(0px)"},
+
+{transform:"translateY(-8px)"},
+
+{transform:"translateY(0px)"}
+
+],{
+
+duration:2200+i*150,
+
+iterations:Infinity
+
+});
+
+});
 
 </script>
 
