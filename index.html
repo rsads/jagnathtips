@@ -1,852 +1,1303 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
+<head><!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4340699666260516');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4340699666260516&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="theme-color" content="#050505">
 
 <title>ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
+
+/* =========================
+   RESET
+========================= */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,sans-serif;
 -webkit-tap-highlight-color:transparent;
 }
 
 html,body{
 width:100%;
-height:100%;
-overflow:hidden;
-background:#070707;
-color:#fff;
+min-height:100%;
 }
 
 body{
+font-family:Arial,Helvetica,sans-serif;
+background:#020202;
+color:#fff;
+overflow-x:hidden;
+}
 
+/* =========================
+   BACKGROUND
+========================= */
+
+.background{
+position:fixed;
+inset:0;
+z-index:-10;
 background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1400&q=80");
-
+linear-gradient(
+rgba(0,0,0,.78),
+rgba(0,0,0,.88)
+),
+url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1400&q=85");
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
+}
+
+.background::after{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%,rgba(255,0,0,.22),transparent 30%),
+radial-gradient(circle at 80% 30%,rgba(0,140,255,.20),transparent 30%),
+radial-gradient(circle at 50% 90%,rgba(255,180,0,.20),transparent 35%);
+animation:bgGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes bgGlow{
+
+0%{
+opacity:.5;
+transform:scale(1);
+}
+
+100%{
+opacity:1;
+transform:scale(1.08);
+}
 
 }
 
-body:before{
+/* =========================
+   PARTICLES
+========================= */
+
+.particles{
+position:fixed;
+inset:0;
+z-index:-5;
+pointer-events:none;
+overflow:hidden;
+}
+
+.particle{
+position:absolute;
+width:4px;
+height:4px;
+border-radius:50%;
+background:#ffd700;
+box-shadow:0 0 12px #ffd700;
+animation:particleMove linear infinite;
+}
+
+@keyframes particleMove{
+
+0%{
+transform:translateY(110vh) scale(.5);
+opacity:0;
+}
+
+20%{
+opacity:.8;
+}
+
+80%{
+opacity:.8;
+}
+
+100%{
+transform:translateY(-20vh) scale(1.3);
+opacity:0;
+}
+
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.page{
+width:100%;
+max-width:480px;
+margin:auto;
+padding:12px 12px 25px;
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.main-card{
+
+position:relative;
+
+padding:16px;
+
+border-radius:25px;
+
+background:rgba(0,0,0,.55);
+
+border:1px solid rgba(255,215,0,.35);
+
+backdrop-filter:blur(12px);
+
+box-shadow:
+0 0 25px rgba(255,0,0,.18),
+0 0 45px rgba(255,215,0,.12);
+
+overflow:hidden;
+
+}
+
+/* Animated Border */
+
+.main-card::before{
 
 content:"";
 
-position:fixed;
+position:absolute;
 
-left:0;
-top:0;
+inset:-2px;
 
-width:100%;
-height:100%;
+border-radius:27px;
 
-background:
-radial-gradient(circle at top,#ff000025,transparent 35%),
-radial-gradient(circle at bottom,#ffd00018,transparent 35%),
-radial-gradient(circle at center,#00d9ff18,transparent 40%);
+background:linear-gradient(
+90deg,
+#ff0000,
+#ffd700,
+#00d9ff,
+#ff00ff,
+#ff0000
+);
 
-animation:bgMove 10s linear infinite;
+background-size:400% 400%;
+
+animation:borderMove 7s linear infinite;
+
+z-index:-2;
+
+}
+
+.main-card::after{
+
+content:"";
+
+position:absolute;
+
+inset:1px;
+
+border-radius:24px;
+
+background:rgba(3,3,3,.92);
 
 z-index:-1;
 
 }
 
-@keyframes bgMove{
+@keyframes borderMove{
+
+0%{
+background-position:0% 50%;
+}
 
 50%{
+background-position:100% 50%;
+}
 
-transform:scale(1.08);
-
+100%{
+background-position:0% 50%;
 }
 
 }
 
-.wrapper{
+/* =========================
+   LOGO
+========================= */
 
-width:100%;
-max-width:430px;
-height:100vh;
-
-margin:auto;
-
-padding:14px;
+.logo-wrap{
 
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
-}
-
-.glass{
-
-width:100%;
-
-padding:20px;
-
-border-radius:28px;
-
-background:rgba(0,0,0,.45);
-
-border:1px solid rgba(255,255,255,.15);
-
-backdrop-filter:blur(16px);
-
-box-shadow:
-
-0 0 40px rgba(255,0,0,.18),
-
-0 0 70px rgba(255,208,0,.12);
-
-text-align:center;
+margin:8px auto 10px;
 
 }
 
 .logo{
 
-width:105px;
+width:125px;
+height:125px;
 
-height:105px;
+object-fit:contain;
 
 border-radius:50%;
 
-border:4px solid gold;
+filter:
+drop-shadow(0 0 8px #ffd700)
+drop-shadow(0 0 20px rgba(255,0,0,.8));
 
-box-shadow:
-
-0 0 18px gold,
-
-0 0 40px red;
-
-animation:logoPulse 2s infinite;
-
-object-fit:cover;
+animation:logoPulse 2.5s ease-in-out infinite;
 
 }
 
 @keyframes logoPulse{
 
+0%,100%{
+transform:scale(1);
+filter:
+drop-shadow(0 0 7px #ffd700)
+drop-shadow(0 0 15px rgba(255,0,0,.7));
+}
+
 50%{
-
-transform:scale(1.07);
-
-box-shadow:
-
-0 0 25px gold,
-
-0 0 60px red;
-
+transform:scale(1.06);
+filter:
+drop-shadow(0 0 15px #ffd700)
+drop-shadow(0 0 35px rgba(255,0,0,1));
 }
 
 }
+
+/* =========================
+   TITLE
+========================= */
 
 .title{
 
-margin-top:15px;
+text-align:center;
 
-font-size:28px;
+font-size:26px;
 
-font-weight:800;
+font-weight:900;
 
-line-height:1.2;
+letter-spacing:.5px;
 
 color:#fff;
 
 text-shadow:
+0 0 8px #fff,
+0 0 15px #ff0000,
+0 0 25px #ffd700;
 
-0 0 10px #fff,
-
-0 0 20px red,
-
-0 0 35px gold;
+animation:titleGlow 2s infinite alternate;
 
 }
 
+@keyframes titleGlow{
+
+from{
+text-shadow:
+0 0 6px #fff,
+0 0 12px red;
+}
+
+to{
+text-shadow:
+0 0 10px #fff,
+0 0 25px red,
+0 0 40px gold;
+}
+
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+
 .subtitle{
 
-margin-top:8px;
+text-align:center;
 
-font-size:13px;
+font-size:12px;
 
 color:#ddd;
+
+margin-top:8px;
 
 line-height:1.6;
 
 }
 
+/* =========================
+   ONLINE
+========================= */
+
 .online{
 
-margin:18px auto 0;
+width:max-content;
 
-display:inline-flex;
+max-width:100%;
 
-align-items:center;
-
-gap:8px;
-
-padding:10px 18px;
-
-border-radius:40px;
-
-background:#101010;
-
-border:1px solid gold;
-
-}
-
-.dot{
-
-width:10px;
-height:10px;
-
-background:#00ff66;
-
-border-radius:50%;
-
-animation:blink 1s infinite;
-
-}
-
-@keyframes blink{
-
-50%{
-
-opacity:.3;
-
-}
-
-}
-
-.counter{
-
-margin-top:18px;
-
-font-size:25px;
-
-font-weight:700;
-
-}
-
-.counter span{
-
-color:#ffd700;
-
-}
-
-.joinBtn{
-
-display:block;
-
-margin-top:22px;
-
-padding:18px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-size:20px;
-
-font-weight:700;
-
-color:#111;
-
-background:linear-gradient(90deg,#ffd700,#ff9800);
-
-box-shadow:
-
-0 0 18px gold,
-
-0 0 35px orange;
-
-animation:joinGlow 1.3s infinite alternate;
-
-}
-
-@keyframes joinGlow{
-
-to{
-
-transform:scale(1.05);
-
-box-shadow:
-
-0 0 35px gold,
-
-0 0 60px orange;
-
-}
-
-}
-
-.countdown{
-
-margin-top:12px;
-
-font-size:14px;
-
-color:#ddd;
-
-}
-
-@media(max-width:420px){
-
-.logo{
-
-width:90px;
-height:90px;
-
-}
-
-.title{
-
-font-size:24px;
-
-}
-
-.joinBtn{
-
-font-size:18px;
-
-padding:16px;
-
-}
-
-.counter{
-
-font-size:22px;
-
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="wrapper">
-
-<div class="glass">
-
-<!-- Replace src with your uploaded logo if hosted locally -->
-<img class="logo"
-src="logo.png"
-alt="Jagannath Tips Logo">
-
-<div class="title">
-ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️
-</div>
-
-<div class="subtitle">
-Premium Cricket Community<br>
-Match • Toss • Session • Live Updates
-</div>
-
-<div class="online">
-
-<div class="dot"></div>
-
-<span id="onlineCount">
-1,284 Online
-</span>
-
-</div>
-
-<div class="counter">
-
-<span id="members">
-68,254
-</span> Members
-
-</div>
-
-<a class="joinBtn"
-href="https://t.me/+uWimtN5undEyYjBl">
-
-🚀 JOIN TELEGRAM
-
-</a>
-
-<div class="countdown">
-
-Redirecting in
-<b id="timer">25</b>s
-
-</div>
-<!-- ========================= -->
-<!-- PART 2 - Cricket Content -->
-<!-- Paste below Part 1 -->
-<!-- ========================= -->
-
-<style>
-
-/* ===== Live Ticker ===== */
-
-.ticker{
-
-margin-top:18px;
-width:100%;
-overflow:hidden;
-border-radius:14px;
-background:linear-gradient(90deg,#ff0000,#ff9900,#ffd700);
-padding:10px 0;
-
-box-shadow:0 0 18px rgba(255,180,0,.5);
-
-}
-
-.tickerText{
-
-display:inline-block;
-white-space:nowrap;
-padding-left:100%;
-font-size:13px;
-font-weight:700;
-color:#111;
-animation:ticker 18s linear infinite;
-
-}
-
-@keyframes ticker{
-
-0%{transform:translateX(0);}
-100%{transform:translateX(-200%);}
-
-}
-
-/* ===== Cricket Grid ===== */
-
-.grid{
-
-margin-top:20px;
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:10px;
-
-width:100%;
-
-}
-
-.box{
-
-background:rgba(255,255,255,.08);
-
-border:1px solid rgba(255,215,0,.35);
-
-border-radius:15px;
-
-padding:12px 5px;
-
-text-align:center;
-
-transition:.35s;
-
-backdrop-filter:blur(12px);
-
-box-shadow:0 0 12px rgba(255,215,0,.15);
-
-}
-
-.box:hover{
-
-transform:translateY(-5px);
-
-border-color:#ffd700;
-
-box-shadow:0 0 25px gold;
-
-}
-
-.icon{
-
-font-size:24px;
-
-margin-bottom:8px;
-
-}
-
-.label{
-
-font-size:11px;
-
-font-weight:700;
-
-letter-spacing:.4px;
-
-}
-
-/* ===== Stats ===== */
-
-.stats{
-
-margin-top:18px;
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:10px;
-
-}
-
-.stat{
-
-padding:14px;
-
-border-radius:16px;
-
-background:rgba(255,255,255,.08);
-
-border:1px solid rgba(255,255,255,.15);
-
-text-align:center;
-
-}
-
-.stat h3{
-
-font-size:24px;
-
-color:#ffd700;
-
-}
-
-.stat p{
-
-font-size:12px;
-
-margin-top:4px;
-
-color:#ddd;
-
-}
-
-/* ===== Feature Strip ===== */
-
-.features{
-
-margin-top:18px;
+margin:12px auto;
 
 display:flex;
 
-justify-content:space-between;
+align-items:center;
 
-gap:8px;
+gap:7px;
 
-flex-wrap:wrap;
+padding:7px 14px;
 
-}
+border-radius:30px;
 
-.tag{
+background:rgba(0,0,0,.7);
 
-flex:1 1 45%;
-
-padding:10px;
+border:1px solid #00ff66;
 
 font-size:12px;
 
-text-align:center;
+font-weight:bold;
 
-border-radius:12px;
-
-background:#111;
-
-border:1px solid rgba(255,215,0,.35);
+box-shadow:0 0 15px rgba(0,255,100,.25);
 
 }
 
-/* ===== Footer ===== */
+.online-dot{
 
-.footer{
+width:8px;
+height:8px;
 
-margin-top:20px;
+border-radius:50%;
+
+background:#00ff66;
+
+box-shadow:0 0 10px #00ff66;
+
+animation:onlineBlink 1s infinite;
+
+}
+
+@keyframes onlineBlink{
+
+50%{
+opacity:.25;
+}
+
+}
+
+/* =========================
+   MEMBER COUNTER
+========================= */
+
+.member-box{
 
 text-align:center;
+
+margin:8px 0;
+
+}
+
+.member-number{
+
+font-size:27px;
+
+font-weight:900;
+
+color:#ffd700;
+
+text-shadow:0 0 15px gold;
+
+}
+
+.member-label{
 
 font-size:11px;
 
 color:#ccc;
 
-line-height:1.8;
+text-transform:uppercase;
+
+letter-spacing:1px;
 
 }
 
-.footer a{
+/* =========================
+   TICKER
+========================= */
 
-color:#ffd700;
+.ticker{
 
-text-decoration:none;
+margin-top:14px;
 
-font-weight:600;
+width:100%;
+
+overflow:hidden;
+
+border-radius:12px;
+
+background:linear-gradient(
+90deg,
+#ff0000,
+#ff8c00,
+#ffd700
+);
+
+box-shadow:
+0 0 15px rgba(255,100,0,.45);
 
 }
 
-/* Mobile */
+.ticker-track{
 
-@media(max-width:420px){
+display:inline-block;
 
-.grid{
+white-space:nowrap;
+
+padding:9px 0 9px 100%;
+
+font-size:11px;
+
+font-weight:900;
+
+color:#050505;
+
+animation:tickerMove 18s linear infinite;
+
+}
+
+@keyframes tickerMove{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-200%);
+}
+
+}
+
+/* =========================
+   CRICKET BOXES
+========================= */
+
+.cricket-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
 
 gap:8px;
 
-}
-
-.box{
-
-padding:10px 4px;
+margin-top:15px;
 
 }
 
-.icon{
+.cricket-box{
+
+min-height:72px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+gap:5px;
+
+border-radius:13px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.18);
+
+box-shadow:
+0 0 10px rgba(0,0,0,.4);
+
+transition:.3s;
+
+animation:boxFloat 3s ease-in-out infinite;
+
+}
+
+.cricket-box:nth-child(2){
+animation-delay:.2s;
+}
+
+.cricket-box:nth-child(3){
+animation-delay:.4s;
+}
+
+.cricket-box:nth-child(4){
+animation-delay:.6s;
+}
+
+.cricket-box:nth-child(5){
+animation-delay:.8s;
+}
+
+.cricket-box:nth-child(6){
+animation-delay:1s;
+}
+
+.cricket-box:nth-child(7){
+animation-delay:1.2s;
+}
+
+.cricket-box:nth-child(8){
+animation-delay:1.4s;
+}
+
+@keyframes boxFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-4px);
+}
+
+}
+
+.cricket-box:hover{
+
+transform:translateY(-5px) scale(1.03);
+
+border-color:#ffd700;
+
+box-shadow:
+0 0 20px rgba(255,215,0,.45);
+
+}
+
+.box-icon{
+
+font-size:22px;
+
+}
+
+.box-name{
+
+font-size:9px;
+
+font-weight:900;
+
+letter-spacing:.5px;
+
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:8px;
+
+margin-top:12px;
+
+}
+
+.stat{
+
+padding:10px;
+
+text-align:center;
+
+border-radius:13px;
+
+background:rgba(0,0,0,.55);
+
+border:1px solid rgba(255,215,0,.3);
+
+}
+
+.stat-number{
+
+font-size:19px;
+
+font-weight:900;
+
+color:#ffd700;
+
+}
+
+.stat-label{
+
+font-size:9px;
+
+color:#bbb;
+
+margin-top:3px;
+
+}
+
+/* =========================
+   FEATURE STRIP
+========================= */
+
+.features{
+
+display:flex;
+
+gap:6px;
+
+margin-top:12px;
+
+overflow:hidden;
+
+}
+
+.feature{
+
+flex:1;
+
+padding:8px 3px;
+
+text-align:center;
+
+border-radius:10px;
+
+font-size:9px;
+
+font-weight:bold;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.14);
+
+}
+
+/* =========================
+   JOIN BUTTON
+========================= */
+
+.join-button{
+
+position:relative;
+
+display:block;
+
+width:100%;
+
+margin-top:16px;
+
+padding:16px 10px;
+
+text-align:center;
+
+text-decoration:none;
+
+border-radius:50px;
 
 font-size:20px;
 
+font-weight:900;
+
+color:#111;
+
+background:
+linear-gradient(
+90deg,
+#ffd700,
+#ff9d00,
+#ffd700
+);
+
+background-size:200% auto;
+
+box-shadow:
+0 0 15px gold,
+0 0 35px rgba(255,140,0,.8);
+
+animation:
+buttonGlow 1.5s infinite alternate,
+buttonGradient 3s linear infinite;
+
+overflow:hidden;
+
 }
 
-.label{
+@keyframes buttonGlow{
+
+from{
+transform:scale(1);
+}
+
+to{
+transform:scale(1.035);
+box-shadow:
+0 0 25px gold,
+0 0 55px orange;
+}
+
+}
+
+@keyframes buttonGradient{
+
+0%{
+background-position:0% center;
+}
+
+100%{
+background-position:200% center;
+}
+
+}
+
+.join-button::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:50%;
+
+height:100%;
+
+background:rgba(255,255,255,.5);
+
+transform:skewX(-25deg);
+
+animation:shine 3s infinite;
+
+}
+
+@keyframes shine{
+
+0%{
+left:-100%;
+}
+
+40%,100%{
+left:150%;
+}
+
+}
+
+/* =========================
+   TELEGRAM LINK
+========================= */
+
+.telegram-link{
+
+text-align:center;
+
+margin-top:9px;
 
 font-size:10px;
 
+color:#aaa;
+
+word-break:break-all;
+
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown{
+
+text-align:center;
+
+margin-top:8px;
+
+font-size:11px;
+
+color:#ddd;
+
+}
+
+#timer{
+
+color:#ffd700;
+
+font-size:15px;
+
+font-weight:bold;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+text-align:center;
+
+margin-top:13px;
+
+padding-top:10px;
+
+border-top:1px solid rgba(255,255,255,.1);
+
+font-size:9px;
+
+color:#888;
+
+}
+
+/* =========================
+   POPUP
+========================= */
+
+.join-popup{
+
+position:fixed;
+
+left:50%;
+
+bottom:18px;
+
+transform:translateX(-50%) translateY(100px);
+
+width:calc(100% - 30px);
+
+max-width:390px;
+
+padding:11px 14px;
+
+border-radius:14px;
+
+background:rgba(5,5,5,.95);
+
+border:1px solid #ffd700;
+
+box-shadow:
+0 0 20px rgba(255,215,0,.45);
+
+font-size:11px;
+
+z-index:100;
+
+opacity:0;
+
+transition:.4s;
+
+}
+
+.join-popup.show{
+
+opacity:1;
+
+transform:translateX(-50%) translateY(0);
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:380px){
+
+.page{
+padding:8px;
+}
+
+.main-card{
+padding:13px;
+}
+
+.logo{
+width:105px;
+height:105px;
+}
+
+.title{
+font-size:22px;
+}
+
+.cricket-grid{
+gap:6px;
+}
+
+.cricket-box{
+min-height:65px;
+}
+
+.box-icon{
+font-size:19px;
+}
+
+.box-name{
+font-size:8px;
+}
+
+.join-button{
+font-size:18px;
+padding:15px 8px;
 }
 
 }
 
 </style>
+</head>
 
-<!-- ===== Live News ===== -->
+<body>
 
+<!-- BACKGROUND -->
+<div class="background"></div>
+
+<!-- PARTICLES -->
+<div class="particles" id="particles"></div>
+
+<div class="page">
+
+<div class="main-card">
+
+<!-- LOGO -->
+<div class="logo-wrap">
+
+<img
+src="logo.png"
+alt="Jagannath Tips Logo"
+class="logo">
+
+</div>
+
+<!-- TITLE -->
+<div class="title">
+
+ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️
+
+</div>
+
+<div class="subtitle">
+
+🏏 PREMIUM CRICKET COMMUNITY<br>
+MATCH • TOSS • SESSION • LIVE UPDATES
+
+</div>
+
+<!-- ONLINE -->
+<div class="online">
+
+<span class="online-dot"></span>
+
+<span id="onlineText">
+1,284 ONLINE NOW
+</span>
+
+</div>
+
+<!-- MEMBERS -->
+<div class="member-box">
+
+<div class="member-number">
+
+<span id="members">
+68,254
+</span>+
+
+</div>
+
+<div class="member-label">
+
+Active Members
+
+</div>
+
+</div>
+
+<!-- TICKER -->
 <div class="ticker">
 
-<div class="tickerText">
+<div class="ticker-track">
 
-🏏 LIVE • MATCH • TOSS • SESSION • PREMIUM • VIP • FAST • EXPERT • JOIN NOW • OFFICIAL CHANNEL
+🏏 MATCH • 🎯 TOSS • 📊 SESSION • 🔥 LIVE • 👑 VIP • ⚡ FAST • ⭐ EXPERT • 💎 PREMIUM • JOIN NOW
 
-</div>
-
-</div>
-
-<!-- ===== Cricket Boxes ===== -->
-
-<div class="grid">
-
-<div class="box">
-<div class="icon">🏏</div>
-<div class="label">MATCH</div>
-</div>
-
-<div class="box">
-<div class="icon">🎯</div>
-<div class="label">TOSS</div>
-</div>
-
-<div class="box">
-<div class="icon">📊</div>
-<div class="label">SESSION</div>
-</div>
-
-<div class="box">
-<div class="icon">👑</div>
-<div class="label">VIP</div>
-</div>
-
-<div class="box">
-<div class="icon">⚡</div>
-<div class="label">FAST</div>
-</div>
-
-<div class="box">
-<div class="icon">🔥</div>
-<div class="label">LIVE</div>
-</div>
-
-<div class="box">
-<div class="icon">⭐</div>
-<div class="label">EXPERT</div>
-</div>
-
-<div class="box">
-<div class="icon">💎</div>
-<div class="label">PREMIUM</div>
 </div>
 
 </div>
 
-<!-- ===== Stats ===== -->
+<!-- CRICKET BOXES -->
+<div class="cricket-grid">
 
+<div class="cricket-box">
+<div class="box-icon">🏏</div>
+<div class="box-name">MATCH</div>
+</div>
+
+<div class="cricket-box">
+<div class="box-icon">🎯</div>
+<div class="box-name">TOSS</div>
+</div>
+
+<div class="cricket-box">
+<div class="box-icon">📊</div>
+<div class="box-name">SESSION</div>
+</div>
+
+<div class="cricket-box">
+<div class="box-icon">🔥</div>
+<div class="box-name">LIVE</div>
+</div>
+
+<div class="cricket-box">
+<div class="box-icon">👑</div>
+<div class="box-name">VIP</div>
+</div>
+
+<div class="cricket-box">
+<div class="box-icon">⚡</div>
+<div class="box-name">FAST</div>
+</div>
+
+<div class="cricket-box">
+<div class="box-icon">⭐</div>
+<div class="box-name">EXPERT</div>
+</div>
+
+<div class="cricket-box">
+<div class="box-icon">💎</div>
+<div class="box-name">PREMIUM</div>
+</div>
+
+</div>
+
+<!-- STATS -->
 <div class="stats">
 
 <div class="stat">
 
-<h3 id="memberCount">68,254+</h3>
+<div class="stat-number" id="activeCount">
+68,254+
+</div>
 
-<p>Active Members</p>
+<div class="stat-label">
+ACTIVE MEMBERS
+</div>
 
 </div>
 
 <div class="stat">
 
-<h3 id="onlineNow">1,284</h3>
+<div class="stat-number" id="onlineCount">
+1,284
+</div>
 
-<p>Online Now</p>
-
+<div class="stat-label">
+ONLINE NOW
 </div>
 
 </div>
 
-<!-- ===== Feature Tags ===== -->
+</div>
 
+<!-- FEATURES -->
 <div class="features">
 
-<div class="tag">🏆 Daily Updates</div>
+<div class="feature">
+🏆 DAILY
+</div>
 
-<div class="tag">🎯 Toss</div>
+<div class="feature">
+🎯 TOSS
+</div>
 
-<div class="tag">📈 Session</div>
+<div class="feature">
+📈 SESSION
+</div>
 
-<div class="tag">⚡ Fast Alert</div>
+<div class="feature">
+⚡ ALERT
+</div>
 
 </div>
 
-<!-- ===== Footer ===== -->
+<!-- JOIN BUTTON -->
+<a
+href="https://t.me/+uWimtN5undEyYjBl"
+class="join-button">
 
-<div class="footer">
-
-<b>ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️</b>
-
-<br>
-
-<a href="https://t.me/+uWimtN5undEyYjBl">
-
-Official Telegram Channel
+🚀 JOIN TELEGRAM NOW
 
 </a>
 
-<br>
+<!-- TELEGRAM LINK -->
+<div class="telegram-link">
 
+https://t.me/+uWimtN5undEyYjBl
+
+</div>
+
+<!-- COUNTDOWN -->
+<div class="countdown">
+
+Redirecting in
+<span id="timer">25</span>
+seconds
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+
+ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️
+<br>
 © 2026 All Rights Reserved
 
 </div>
 
 </div>
 
-<!-- Popup -->
-<div id="popup"></div>
+</div>
 
-<!-- ========================= -->
-<!-- PART 3 - JavaScript -->
-<!-- Paste after Part 2 -->
-<!-- ========================= -->
+<!-- JOIN POPUP -->
+<div
+class="join-popup"
+id="joinPopup">
+
+</div>
+
 
 <script>
 
-//==========================
-// MEMBER COUNTER
-//==========================
+/* =========================
+   PARTICLES
+========================= */
 
-let members = 68254;
+const particleBox =
+document.getElementById("particles");
+
+for(let i=0;i<35;i++){
+
+const p =
+document.createElement("div");
+
+p.className="particle";
+
+p.style.left =
+Math.random()*100+"%";
+
+p.style.animationDuration =
+(5+Math.random()*8)+"s";
+
+p.style.animationDelay =
+Math.random()*8+"s";
+
+p.style.opacity =
+.2+Math.random()*.7;
+
+particleBox.appendChild(p);
+
+}
+
+
+/* =========================
+   MEMBER COUNTER
+========================= */
+
+let members=68254;
 
 setInterval(()=>{
 
-members += Math.floor(Math.random()*3);
+members +=
+Math.floor(Math.random()*3);
 
-document.getElementById("members").innerHTML =
+document.getElementById("members")
+.innerText=
 members.toLocaleString();
 
-const mc=document.getElementById("memberCount");
-
-if(mc){
-mc.innerHTML=members.toLocaleString()+"+";
-}
-
-},2500);
-
-
-//==========================
-// ONLINE USERS
-//==========================
-
-setInterval(()=>{
-
-let online=1200+Math.floor(Math.random()*180);
-
-document.getElementById("onlineCount").innerHTML=
-online.toLocaleString()+" Online";
-
-const on=document.getElementById("onlineNow");
-
-if(on){
-on.innerHTML=online.toLocaleString();
-}
+document.getElementById("activeCount")
+.innerText=
+members.toLocaleString()+"+";
 
 },3000);
 
 
-//==========================
-// COUNTDOWN
-//==========================
+/* =========================
+   ONLINE COUNTER
+========================= */
 
-let sec=25;
+let online=1284;
 
-const timer=document.getElementById("timer");
+setInterval(()=>{
 
-const countdown=setInterval(()=>{
+online =
+1280+
+Math.floor(Math.random()*120);
 
-sec--;
+document.getElementById("onlineText")
+.innerText=
+online.toLocaleString()+" ONLINE NOW";
 
-timer.innerHTML=sec;
+document.getElementById("onlineCount")
+.innerText=
+online.toLocaleString();
 
-if(sec<=0){
+},2500);
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+let seconds=25;
+
+const timer =
+document.getElementById("timer");
+
+const telegramURL =
+"https://t.me/+uWimtN5undEyYjBl";
+
+const countdown =
+setInterval(()=>{
+
+seconds--;
+
+timer.innerText=seconds;
+
+if(seconds<=0){
 
 clearInterval(countdown);
 
-window.location.href=
-"https://t.me/+uWimtN5undEyYjBl";
+window.location.href =
+telegramURL;
 
 }
 
 },1000);
 
 
-//==========================
-// FAKE JOIN POPUP
-//==========================
+/* =========================
+   JOIN POPUP
+========================= */
 
-const popup=document.getElementById("popup");
+const popup =
+document.getElementById("joinPopup");
 
-popup.style.cssText=`
-position:fixed;
-left:50%;
-bottom:18px;
-transform:translateX(-50%);
-background:#111;
-border:2px solid gold;
-padding:12px 18px;
-border-radius:15px;
-color:#fff;
-font-size:13px;
-display:none;
-z-index:9999;
-box-shadow:0 0 25px gold;
-`;
-
-const users=[
+const names=[
 "Rahul",
 "Amit",
 "Vikas",
@@ -856,199 +1307,87 @@ const users=[
 "Arjun",
 "Vivek",
 "Yash",
-"Nikhil",
-"Abhishek",
-"Sachin",
-"Sumit",
-"Pankaj",
-"Harsh"
+"Nikhil"
 ];
 
 function showPopup(){
 
-let name=
-users[Math.floor(Math.random()*users.length)];
+const name =
+names[
+Math.floor(
+Math.random()*names.length
+)
+];
 
-popup.innerHTML=
-"✅ <b>"+name+"</b> joined Telegram";
+popup.innerHTML =
+"✅ <b>"+name+
+"</b> just joined the community";
 
-popup.style.display="block";
-
-popup.animate([
-
-{opacity:0,transform:"translate(-50%,40px)"},
-
-{opacity:1,transform:"translate(-50%,0px)"}
-
-],{
-
-duration:400,
-
-fill:"forwards"
-
-});
+popup.classList.add("show");
 
 setTimeout(()=>{
 
-popup.style.display="none";
+popup.classList.remove("show");
 
-},2500);
-
-}
-
-setInterval(showPopup,7000);
-
-
-//==========================
-// FLOATING PARTICLES
-//==========================
-
-for(let i=0;i<40;i++){
-
-let p=document.createElement("span");
-
-p.style.position="fixed";
-
-p.style.left=Math.random()*100+"%";
-
-p.style.top=Math.random()*100+"%";
-
-p.style.width="4px";
-
-p.style.height="4px";
-
-p.style.borderRadius="50%";
-
-p.style.background="gold";
-
-p.style.boxShadow="0 0 12px gold";
-
-p.style.opacity=".5";
-
-p.style.pointerEvents="none";
-
-p.style.animation=
-"float "+(5+Math.random()*8)+"s linear infinite";
-
-document.body.appendChild(p);
+},2800);
 
 }
 
-const style=document.createElement("style");
-
-style.innerHTML=`
-
-@keyframes float{
-
-0%{
-
-transform:translateY(120vh);
-
-opacity:0;
-
-}
-
-20%{
-
-opacity:.7;
-
-}
-
-100%{
-
-transform:translateY(-120vh);
-
-opacity:0;
-
-}
-
-}
-
-`;
-
-document.head.appendChild(style);
+setInterval(
+showPopup,
+7000
+);
 
 
-//==========================
-// BUTTON GLOW
-//==========================
+/* =========================
+   BUTTON CLICK EFFECT
+========================= */
 
-const btn=document.querySelector(".joinBtn");
+const button =
+document.querySelector(".join-button");
 
-setInterval(()=>{
+button.addEventListener(
+"click",
+()=>{
 
-btn.style.transform="scale(1.05)";
+button.innerHTML =
+"🚀 OPENING TELEGRAM...";
 
 setTimeout(()=>{
 
-btn.style.transform="scale(1)";
+button.innerHTML =
+"🚀 JOIN TELEGRAM NOW";
 
-},700);
+},1500);
 
-},1600);
-
-
-//==========================
-// TITLE BLINK
-//==========================
-
-setInterval(()=>{
-
-document.title="🏏 ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️";
-
-setTimeout(()=>{
-
-document.title="🔥 JOIN TELEGRAM";
-
-},1000);
-
-},2500);
+}
+);
 
 
-//==========================
-// LOGO ROTATION
-//==========================
+/* =========================
+   PREVENT DOUBLE TAP ZOOM
+========================= */
 
-const logo=document.querySelector(".logo");
+let lastTouchEnd=0;
 
-setInterval(()=>{
+document.addEventListener(
+"touchend",
+function(event){
 
-logo.style.transition="1.2s";
+const now =
+(new Date()).getTime();
 
-logo.style.transform="rotate(360deg)";
+if(now-lastTouchEnd<=300){
 
-setTimeout(()=>{
+event.preventDefault();
 
-logo.style.transform="rotate(0deg)";
+}
 
-},1200);
+lastTouchEnd=now;
 
-},8000);
-
-
-//==========================
-// CARD ANIMATION
-//==========================
-
-document.querySelectorAll(".box").forEach((box,i)=>{
-
-box.animate([
-
-{transform:"translateY(0px)"},
-
-{transform:"translateY(-8px)"},
-
-{transform:"translateY(0px)"}
-
-],{
-
-duration:2200+i*150,
-
-iterations:Infinity
-
-});
-
-});
+},
+false
+);
 
 </script>
 
