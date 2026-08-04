@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4340699666260516');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4340699666260516&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 
 <meta name="viewport"
@@ -14,1260 +30,1209 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable
 <style>
 
 /* =========================
-RESET
+   RESET
 ========================= */
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
--webkit-tap-highlight-color:transparent;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
 }
 
 html,
 body{
-width:100%;
-min-height:100%;
+    width:100%;
+    min-height:100%;
 }
 
 body{
-
-font-family:
-Arial,
-Helvetica,
-sans-serif;
-
-background:#020202;
-
-color:#fff;
-
-overflow-x:hidden;
-
+    font-family:Arial,Helvetica,sans-serif;
+    background:#020202;
+    color:#fff;
+    overflow-x:hidden;
 }
 
+
 /* =========================
-BACKGROUND
+   BACKGROUND
 ========================= */
 
 .background{
 
-position:fixed;
+    position:fixed;
 
-inset:0;
+    inset:0;
 
-z-index:-10;
+    z-index:-10;
 
-background:
+    background:
 
-linear-gradient(
-rgba(0,0,0,.80),
-rgba(0,0,0,.90)
-),
+    linear-gradient(
+        rgba(0,0,0,.80),
+        rgba(0,0,0,.92)
+    ),
 
-url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1400&q=85");
+    url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1400&q=85");
 
-background-size:cover;
+    background-size:cover;
 
-background-position:center;
+    background-position:center;
 
 }
 
 .background::after{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
-background:
+    background:
 
-radial-gradient(
-circle at 20% 20%,
-rgba(255,0,0,.20),
-transparent 30%
-),
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(255,0,0,.20),
+        transparent 30%
+    ),
 
-radial-gradient(
-circle at 80% 30%,
-rgba(0,140,255,.18),
-transparent 30%
-),
+    radial-gradient(
+        circle at 80% 30%,
+        rgba(0,140,255,.18),
+        transparent 30%
+    ),
 
-radial-gradient(
-circle at 50% 90%,
-rgba(255,180,0,.15),
-transparent 35%
-);
+    radial-gradient(
+        circle at 50% 90%,
+        rgba(255,180,0,.15),
+        transparent 35%
+    );
 
-animation:bgGlow 8s ease-in-out infinite alternate;
+    animation:bgGlow 8s ease-in-out infinite alternate;
 
 }
 
 @keyframes bgGlow{
 
-0%{
-opacity:.5;
-transform:scale(1);
+    0%{
+        opacity:.5;
+        transform:scale(1);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1.08);
+    }
+
 }
 
-100%{
-opacity:1;
-transform:scale(1.08);
-}
-
-}
 
 /* =========================
-PARTICLES
+   PARTICLES
 ========================= */
 
 .particles{
 
-position:fixed;
+    position:fixed;
 
-inset:0;
+    inset:0;
 
-z-index:-5;
+    z-index:-5;
 
-pointer-events:none;
+    pointer-events:none;
 
-overflow:hidden;
+    overflow:hidden;
 
 }
 
 .particle{
 
-position:absolute;
+    position:absolute;
 
-width:4px;
+    width:4px;
 
-height:4px;
+    height:4px;
 
-border-radius:50%;
+    border-radius:50%;
 
-background:#ffd700;
+    background:#ffd700;
 
-box-shadow:0 0 12px #ffd700;
+    box-shadow:0 0 12px #ffd700;
 
-animation:
-particleMove linear infinite;
+    animation:particleMove linear infinite;
 
 }
 
 @keyframes particleMove{
 
-0%{
+    0%{
 
-transform:
-translateY(110vh)
-scale(.5);
+        transform:
+        translateY(110vh)
+        scale(.5);
 
-opacity:0;
+        opacity:0;
 
-}
+    }
 
-20%{
+    20%{
+        opacity:.8;
+    }
 
-opacity:.8;
+    80%{
+        opacity:.8;
+    }
 
-}
+    100%{
 
-80%{
+        transform:
+        translateY(-20vh)
+        scale(1.3);
 
-opacity:.8;
+        opacity:0;
 
-}
-
-100%{
-
-transform:
-translateY(-20vh)
-scale(1.3);
-
-opacity:0;
+    }
 
 }
 
-}
 
 /* =========================
-MAIN PAGE
+   PAGE
 ========================= */
 
 .page{
 
-width:100%;
+    width:100%;
 
-max-width:480px;
+    max-width:480px;
 
-margin:auto;
+    margin:auto;
 
-padding:10px 10px 20px;
+    padding:10px 10px 20px;
 
 }
 
+
 /* =========================
-MAIN CARD
+   MAIN CARD
 ========================= */
 
 .main-card{
 
-position:relative;
+    position:relative;
 
-padding:12px;
+    padding:12px;
 
-border-radius:20px;
+    border-radius:20px;
 
-background:
-rgba(0,0,0,.48);
+    background:
+    rgba(0,0,0,.48);
 
-border:
-1px solid
-rgba(255,215,0,.25);
+    border:
+    1px solid
+    rgba(255,215,0,.25);
 
-backdrop-filter:
-blur(10px);
+    backdrop-filter:
+    blur(10px);
 
-box-shadow:
+    box-shadow:
 
-0 0 20px
-rgba(255,0,0,.12),
+    0 0 20px
+    rgba(255,0,0,.12),
 
-0 0 35px
-rgba(255,215,0,.08);
+    0 0 35px
+    rgba(255,215,0,.08);
 
-overflow:hidden;
+    overflow:hidden;
 
 }
 
-/* Animated Border */
-
 .main-card::before{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-inset:-2px;
+    inset:-2px;
 
-border-radius:22px;
+    border-radius:22px;
 
-background:
+    background:
 
-linear-gradient(
-90deg,
-#ff0000,
-#ffd700,
-#00d9ff,
-#7b2cff,
-#ff0000
-);
+    linear-gradient(
+        90deg,
+        #ff0000,
+        #ffd700,
+        #00d9ff,
+        #7b2cff,
+        #ff0000
+    );
 
-background-size:
-400% 400%;
+    background-size:400% 400%;
 
-animation:
-borderMove 7s linear infinite;
+    animation:borderMove 7s linear infinite;
 
-z-index:-2;
+    z-index:-2;
 
 }
 
 .main-card::after{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-inset:1px;
+    inset:1px;
 
-border-radius:19px;
+    border-radius:19px;
 
-background:
-rgba(3,3,3,.92);
+    background:
+    rgba(3,3,3,.92);
 
-z-index:-1;
+    z-index:-1;
 
 }
 
 @keyframes borderMove{
 
-0%{
-background-position:0% 50%;
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
 }
 
-50%{
-background-position:100% 50%;
-}
-
-100%{
-background-position:0% 50%;
-}
-
-}
 
 /* =========================
-LOGO
+   LOGO
 ========================= */
 
 .logo-wrap{
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
+    align-items:center;
 
-margin:
-5px auto
-8px;
+    margin:
+    5px auto
+    8px;
 
 }
 
 .logo{
 
-width:100px;
+    width:100px;
 
-height:100px;
+    height:100px;
 
-object-fit:contain;
+    object-fit:contain;
 
-border-radius:50%;
+    border-radius:50%;
 
-filter:
+    filter:
 
-drop-shadow(
-0 0 7px
-#ffd700
-)
+    drop-shadow(
+        0 0 7px
+        #ffd700
+    )
 
-drop-shadow(
-0 0 16px
-rgba(255,0,0,.7)
-);
+    drop-shadow(
+        0 0 16px
+        rgba(255,0,0,.7)
+    );
 
-animation:
-logoPulse 2.5s
-ease-in-out infinite;
+    animation:
+    logoPulse 2.5s
+    ease-in-out infinite;
 
 }
 
 @keyframes logoPulse{
 
-0%,
-100%{
+    0%,
+    100%{
 
-transform:
-scale(1);
+        transform:scale(1);
 
-filter:
+        filter:
 
-drop-shadow(
-0 0 7px
-#ffd700
-)
+        drop-shadow(
+            0 0 7px
+            #ffd700
+        )
 
-drop-shadow(
-0 0 15px
-rgba(255,0,0,.7)
-);
+        drop-shadow(
+            0 0 15px
+            rgba(255,0,0,.7)
+        );
 
-}
+    }
 
-50%{
+    50%{
 
-transform:
-scale(1.06);
+        transform:scale(1.06);
 
-filter:
+        filter:
 
-drop-shadow(
-0 0 15px
-#ffd700
-)
+        drop-shadow(
+            0 0 15px
+            #ffd700
+        )
 
-drop-shadow(
-0 0 35px
-rgba(255,0,0,1)
-);
+        drop-shadow(
+            0 0 35px
+            rgba(255,0,0,1)
+        );
 
-}
+    }
 
 }
+
 
 /* =========================
-TITLE
+   TITLE
 ========================= */
 
 .title{
 
-text-align:center;
+    text-align:center;
 
-font-size:25px;
+    font-size:25px;
 
-font-weight:900;
+    font-weight:900;
 
-letter-spacing:.5px;
+    letter-spacing:.5px;
 
-color:#fff;
+    color:#fff;
 
-text-shadow:
+    text-shadow:
 
-0 0 8px #fff,
+    0 0 8px #fff,
 
-0 0 15px #ff0000,
+    0 0 15px #ff0000,
 
-0 0 25px #ffd700;
+    0 0 25px #ffd700;
 
-animation:
-titleGlow 2s
-infinite alternate;
+    animation:
+    titleGlow 2s
+    infinite alternate;
 
 }
 
 @keyframes titleGlow{
 
-from{
+    from{
 
-text-shadow:
+        text-shadow:
 
-0 0 6px #fff,
+        0 0 6px #fff,
 
-0 0 12px red;
+        0 0 12px red;
+
+    }
+
+    to{
+
+        text-shadow:
+
+        0 0 10px #fff,
+
+        0 0 25px red,
+
+        0 0 40px gold;
+
+    }
 
 }
 
-to{
-
-text-shadow:
-
-0 0 10px #fff,
-
-0 0 25px red,
-
-0 0 40px gold;
-
-}
-
-}
 
 /* =========================
-SUBTITLE
+   SUBTITLE
 ========================= */
 
 .subtitle{
 
-text-align:center;
+    text-align:center;
 
-font-size:11px;
+    font-size:11px;
 
-color:#ddd;
+    color:#ddd;
 
-margin-top:6px;
+    margin-top:6px;
 
-line-height:1.5;
+    line-height:1.5;
 
 }
 
+
 /* =========================
-ONLINE
+   ONLINE
 ========================= */
 
 .online{
 
-width:max-content;
+    width:max-content;
 
-max-width:100%;
+    max-width:100%;
 
-margin:
-9px auto;
+    margin:
+    9px auto;
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-gap:7px;
+    gap:7px;
 
-padding:
-6px 13px;
+    padding:
+    6px 13px;
 
-border-radius:30px;
+    border-radius:30px;
 
-background:
-rgba(0,0,0,.7);
+    background:
+    rgba(0,0,0,.7);
 
-border:
-1px solid
-#00ff66;
+    border:
+    1px solid
+    #00ff66;
 
-font-size:11px;
+    font-size:11px;
 
-font-weight:bold;
+    font-weight:bold;
 
-box-shadow:
-0 0 15px
-rgba(0,255,100,.25);
+    box-shadow:
+    0 0 15px
+    rgba(0,255,100,.25);
 
 }
 
 .online-dot{
 
-width:8px;
+    width:8px;
 
-height:8px;
+    height:8px;
 
-border-radius:50%;
+    border-radius:50%;
 
-background:#00ff66;
+    background:#00ff66;
 
-box-shadow:
-0 0 10px
-#00ff66;
+    box-shadow:
+    0 0 10px
+    #00ff66;
 
-animation:
-onlineBlink 1s infinite;
+    animation:
+    onlineBlink 1s infinite;
 
 }
 
 @keyframes onlineBlink{
 
-50%{
-
-opacity:.25;
-
-}
+    50%{
+        opacity:.25;
+    }
 
 }
+
 
 /* =========================
-MEMBERS
+   MEMBERS
 ========================= */
 
 .member-box{
 
-text-align:center;
+    text-align:center;
 
-margin:
-5px 0;
+    margin:
+    5px 0;
 
 }
 
 .member-number{
 
-font-size:24px;
+    font-size:24px;
 
-font-weight:900;
+    font-weight:900;
 
-color:#ffd700;
+    color:#ffd700;
 
-text-shadow:
-0 0 15px gold;
+    text-shadow:
+    0 0 15px gold;
 
 }
 
 .member-label{
 
-font-size:9px;
+    font-size:9px;
 
-color:#ccc;
+    color:#ccc;
 
-text-transform:uppercase;
+    text-transform:uppercase;
 
-letter-spacing:1px;
+    letter-spacing:1px;
 
 }
 
+
 /* =========================
-TICKER
+   TICKER
 ========================= */
 
 .ticker{
 
-margin-top:10px;
+    margin-top:10px;
 
-width:100%;
+    width:100%;
 
-overflow:hidden;
+    overflow:hidden;
 
-border-radius:10px;
+    border-radius:10px;
 
-background:
+    background:
 
-linear-gradient(
-90deg,
-#ff0000,
-#ff8c00,
-#ffd700
-);
+    linear-gradient(
+        90deg,
+        #ff0000,
+        #ff8c00,
+        #ffd700
+    );
 
-box-shadow:
+    box-shadow:
 
-0 0 15px
-rgba(255,100,0,.45);
+    0 0 15px
+    rgba(255,100,0,.45);
 
 }
 
 .ticker-track{
 
-display:inline-block;
+    display:inline-block;
 
-white-space:nowrap;
+    white-space:nowrap;
 
-padding:
-8px 0
-8px 100%;
+    padding:
+    8px 0
+    8px 100%;
 
-font-size:10px;
+    font-size:10px;
 
-font-weight:900;
+    font-weight:900;
 
-color:#050505;
+    color:#050505;
 
-animation:
-tickerMove 18s
-linear infinite;
+    animation:
+    tickerMove 18s
+    linear infinite;
 
 }
 
 @keyframes tickerMove{
 
-0%{
+    0%{
+        transform:translateX(0);
+    }
 
-transform:
-translateX(0);
-
-}
-
-100%{
-
-transform:
-translateX(-200%);
+    100%{
+        transform:translateX(-200%);
+    }
 
 }
 
-}
 
 /* =========================
-CRICKET BOXES
+   CRICKET BOXES
 ========================= */
 
 .cricket-grid{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:
-repeat(4,1fr);
+    grid-template-columns:
+    repeat(4,1fr);
 
-gap:6px;
+    gap:6px;
 
-margin-top:10px;
+    margin-top:10px;
 
 }
 
 .cricket-box{
 
-min-height:58px;
+    min-height:58px;
 
-display:flex;
+    display:flex;
 
-flex-direction:column;
+    flex-direction:column;
 
-align-items:center;
+    align-items:center;
 
-justify-content:center;
+    justify-content:center;
 
-gap:3px;
+    gap:3px;
 
-border-radius:11px;
+    border-radius:11px;
 
-background:
+    background:
 
-rgba(255,255,255,.05);
+    rgba(255,255,255,.05);
 
-border:
+    border:
 
-1px solid
-rgba(255,255,255,.16);
+    1px solid
+    rgba(255,255,255,.16);
 
-box-shadow:
+    box-shadow:
 
-0 0 8px
-rgba(0,0,0,.4);
+    0 0 8px
+    rgba(0,0,0,.4);
 
-transition:.3s;
+    transition:.3s;
 
-animation:
+    animation:
 
-boxFloat 3s
-ease-in-out infinite;
+    boxFloat 3s
+    ease-in-out infinite;
 
 }
 
 .cricket-box:nth-child(2){
-animation-delay:.2s;
+    animation-delay:.2s;
 }
 
 .cricket-box:nth-child(3){
-animation-delay:.4s;
+    animation-delay:.4s;
 }
 
 .cricket-box:nth-child(4){
-animation-delay:.6s;
+    animation-delay:.6s;
 }
 
 .cricket-box:nth-child(5){
-animation-delay:.8s;
+    animation-delay:.8s;
 }
 
 .cricket-box:nth-child(6){
-animation-delay:1s;
+    animation-delay:1s;
 }
 
 .cricket-box:nth-child(7){
-animation-delay:1.2s;
+    animation-delay:1.2s;
 }
 
 .cricket-box:nth-child(8){
-animation-delay:1.4s;
+    animation-delay:1.4s;
 }
 
 @keyframes boxFloat{
 
-0%,
-100%{
+    0%,
+    100%{
+        transform:translateY(0);
+    }
 
-transform:
-translateY(0);
-
-}
-
-50%{
-
-transform:
-translateY(-3px);
-
-}
+    50%{
+        transform:translateY(-3px);
+    }
 
 }
 
 .cricket-box:hover{
 
-transform:
-translateY(-5px)
-scale(1.03);
+    transform:
+    translateY(-5px)
+    scale(1.03);
 
-border-color:
-#ffd700;
+    border-color:
+    #ffd700;
 
-box-shadow:
+    box-shadow:
 
-0 0 20px
-rgba(255,215,0,.45);
+    0 0 20px
+    rgba(255,215,0,.45);
 
 }
 
 .box-icon{
 
-font-size:20px;
+    font-size:20px;
 
 }
 
 .box-name{
 
-font-size:8px;
+    font-size:8px;
 
-font-weight:900;
+    font-weight:900;
 
-letter-spacing:.4px;
+    letter-spacing:.4px;
 
 }
 
+
 /* =========================
-STATS
+   STATS
 ========================= */
 
 .stats{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:
-1fr 1fr;
+    grid-template-columns:
+    1fr 1fr;
 
-gap:6px;
+    gap:6px;
 
-margin-top:9px;
+    margin-top:9px;
 
 }
 
 .stat{
 
-padding:8px;
+    padding:8px;
 
-text-align:center;
+    text-align:center;
 
-border-radius:11px;
+    border-radius:11px;
 
-background:
-rgba(0,0,0,.55);
+    background:
+    rgba(0,0,0,.55);
 
-border:
-1px solid
-rgba(255,215,0,.25);
+    border:
+    1px solid
+    rgba(255,215,0,.25);
 
 }
 
 .stat-number{
 
-font-size:17px;
+    font-size:17px;
 
-font-weight:900;
+    font-weight:900;
 
-color:#ffd700;
+    color:#ffd700;
 
 }
 
 .stat-label{
 
-font-size:8px;
+    font-size:8px;
 
-color:#bbb;
+    color:#bbb;
 
-margin-top:2px;
+    margin-top:2px;
 
 }
 
+
 /* =========================
-FEATURES
+   FEATURES
 ========================= */
 
 .features{
 
-display:flex;
+    display:flex;
 
-gap:5px;
+    gap:5px;
 
-margin-top:9px;
+    margin-top:9px;
 
 }
 
 .feature{
 
-flex:1;
+    flex:1;
 
-padding:7px 2px;
+    padding:7px 2px;
 
-text-align:center;
+    text-align:center;
 
-border-radius:9px;
+    border-radius:9px;
 
-font-size:8px;
+    font-size:8px;
 
-font-weight:bold;
+    font-weight:bold;
 
-background:
-rgba(255,255,255,.05);
+    background:
+    rgba(255,255,255,.05);
 
-border:
-1px solid
-rgba(255,255,255,.12);
+    border:
+    1px solid
+    rgba(255,255,255,.12);
 
 }
 
+
 /* =========================
-JOIN BUTTON
+   JOIN BUTTON
 ========================= */
 
 .join-button{
 
-position:relative;
+    position:relative;
 
-display:block;
+    display:block;
 
-width:100%;
+    width:100%;
 
-margin-top:13px;
+    margin-top:8px;
 
-padding:20px 12px;
+    padding:20px 12px;
 
-text-align:center;
+    text-align:center;
 
-text-decoration:none;
+    text-decoration:none;
 
-border-radius:60px;
+    border-radius:60px;
 
-font-size:23px;
+    font-size:23px;
 
-font-weight:900;
+    font-weight:900;
 
-letter-spacing:.5px;
+    letter-spacing:.5px;
 
-color:#fff;
+    color:#fff;
 
-background:
+    background:
 
-linear-gradient(
-135deg,
-#0066ff,
-#00c6ff,
-#7b2cff,
-#0066ff
-);
+    linear-gradient(
+        135deg,
+        #0066ff,
+        #00c6ff,
+        #7b2cff,
+        #0066ff
+    );
 
-background-size:
-300% 300%;
+    background-size:
+    300% 300%;
 
-border:
-2px solid
-rgba(255,255,255,.6);
+    border:
+    2px solid
+    rgba(255,255,255,.6);
 
-box-shadow:
+    box-shadow:
 
-0 0 15px
-#00c6ff,
+    0 0 15px
+    #00c6ff,
 
-0 0 35px
-#0066ff,
+    0 0 35px
+    #0066ff,
 
-0 0 65px
-rgba(123,44,255,.7);
+    0 0 65px
+    rgba(123,44,255,.7);
 
-animation:
+    animation:
 
-buttonGlow
-1.4s infinite alternate,
+    buttonGlow
+    1.4s infinite alternate,
 
-buttonGradient
-4s ease infinite;
+    buttonGradient
+    4s ease infinite;
 
-overflow:hidden;
+    overflow:hidden;
 
 }
 
 @keyframes buttonGlow{
 
-from{
+    from{
 
-transform:
-scale(1);
+        transform:scale(1);
 
-box-shadow:
+        box-shadow:
 
-0 0 15px
-#00c6ff,
+        0 0 15px
+        #00c6ff,
 
-0 0 30px
-#0066ff;
+        0 0 30px
+        #0066ff;
 
-}
+    }
 
-to{
+    to{
 
-transform:
-scale(1.045);
+        transform:scale(1.045);
 
-box-shadow:
+        box-shadow:
 
-0 0 25px
-#00eaff,
+        0 0 25px
+        #00eaff,
 
-0 0 55px
-#7b2cff,
+        0 0 55px
+        #7b2cff,
 
-0 0 80px
-rgba(0,198,255,.6);
+        0 0 80px
+        rgba(0,198,255,.6);
 
-}
+    }
 
 }
 
 @keyframes buttonGradient{
 
-0%{
+    0%{
+        background-position:0% 50%;
+    }
 
-background-position:
-0% 50%;
+    50%{
+        background-position:100% 50%;
+    }
 
-}
-
-50%{
-
-background-position:
-100% 50%;
-
-}
-
-100%{
-
-background-position:
-0% 50%;
-
-}
+    100%{
+        background-position:0% 50%;
+    }
 
 }
 
 .join-button::after{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-top:0;
+    top:0;
 
-left:-100%;
+    left:-100%;
 
-width:50%;
+    width:50%;
 
-height:100%;
+    height:100%;
 
-background:
-rgba(255,255,255,.5);
+    background:
+    rgba(255,255,255,.5);
 
-transform:
-skewX(-25deg);
+    transform:
+    skewX(-25deg);
 
-animation:
-shine 3s infinite;
+    animation:
+    shine 3s infinite;
 
 }
 
 @keyframes shine{
 
-0%{
+    0%{
+        left:-100%;
+    }
 
-left:-100%;
-
-}
-
-40%,
-100%{
-
-left:150%;
+    40%,
+    100%{
+        left:150%;
+    }
 
 }
 
-}
 
 /* =========================
-TELEGRAM USERNAME
+   CLICKABLE USERNAME
 ========================= */
 
-.telegram-link{
+.telegram-user{
 
-text-align:center;
+    text-align:center;
 
-margin-top:7px;
+    margin-top:5px;
 
-font-size:10px;
-
-color:#aaa;
+    font-size:14px;
 
 }
 
-.telegram-link a{
+.telegram-user a{
 
-color:#00d9ff;
+    color:#00d9ff;
 
-font-size:14px;
+    font-size:14px;
 
-font-weight:800;
+    font-weight:800;
 
-text-decoration:none;
+    text-decoration:none;
 
-text-shadow:
+    text-shadow:
 
-0 0 10px
-#00d9ff;
+    0 0 8px
+    #00d9ff,
+
+    0 0 18px
+    rgba(0,217,255,.7);
+
+}
+
+.telegram-user a:hover{
+
+    color:#fff;
+
+    text-shadow:
+
+    0 0 10px
+    #00d9ff,
+
+    0 0 25px
+    #7b2cff;
 
 }
 
-.telegram-link a:hover{
-
-color:#fff;
-
-text-shadow:
-
-0 0 10px
-#00d9ff,
-
-0 0 25px
-#7b2cff;
-
-}
 
 /* =========================
-COUNTDOWN
+   COUNTDOWN
 ========================= */
 
 .countdown{
 
-text-align:center;
+    text-align:center;
 
-margin-top:6px;
+    margin-top:6px;
 
-font-size:10px;
+    font-size:10px;
 
-color:#aaa;
+    color:#aaa;
 
 }
 
 #timer{
 
-color:#00d9ff;
+    color:#00d9ff;
 
-font-size:13px;
+    font-size:13px;
 
-font-weight:bold;
+    font-weight:bold;
 
 }
 
+
 /* =========================
-FOOTER
+   FOOTER
 ========================= */
 
 .footer{
 
-text-align:center;
+    text-align:center;
 
-margin-top:9px;
+    margin-top:9px;
 
-padding-top:7px;
+    padding-top:7px;
 
-border-top:
+    border-top:
 
-1px solid
-rgba(255,255,255,.1);
+    1px solid
+    rgba(255,255,255,.1);
 
-font-size:8px;
+    font-size:8px;
 
-color:#777;
+    color:#777;
 
 }
 
+
 /* =========================
-POPUP
+   POPUP
 ========================= */
 
 .join-popup{
 
-position:fixed;
+    position:fixed;
 
-left:50%;
+    left:50%;
 
-bottom:15px;
+    bottom:15px;
 
-transform:
-translateX(-50%)
-translateY(100px);
+    transform:
+    translateX(-50%)
+    translateY(100px);
 
-width:
-calc(100% - 30px);
+    width:
+    calc(100% - 30px);
 
-max-width:380px;
+    max-width:380px;
 
-padding:
-10px 13px;
+    padding:
+    10px 13px;
 
-border-radius:13px;
+    border-radius:13px;
 
-background:
-rgba(5,5,5,.95);
+    background:
+    rgba(5,5,5,.95);
 
-border:
-1px solid
-#ffd700;
+    border:
+    1px solid
+    #ffd700;
 
-box-shadow:
+    box-shadow:
 
-0 0 20px
-rgba(255,215,0,.45);
+    0 0 20px
+    rgba(255,215,0,.45);
 
-font-size:11px;
+    font-size:11px;
 
-z-index:100;
+    z-index:100;
 
-opacity:0;
+    opacity:0;
 
-transition:.4s;
+    transition:.4s;
 
 }
 
 .join-popup.show{
 
-opacity:1;
+    opacity:1;
 
-transform:
-translateX(-50%)
-translateY(0);
+    transform:
+    translateX(-50%)
+    translateY(0);
 
 }
 
+
 /* =========================
-MOBILE
+   MOBILE
 ========================= */
 
 @media(max-width:380px){
 
-.page{
+    .page{
+        padding:7px;
+    }
 
-padding:
-7px;
+    .main-card{
+        padding:10px;
+    }
 
-}
+    .logo{
+        width:90px;
+        height:90px;
+    }
 
-.main-card{
+    .title{
+        font-size:21px;
+    }
 
-padding:
-10px;
+    .cricket-grid{
+        gap:5px;
+    }
 
-}
+    .cricket-box{
+        min-height:54px;
+    }
 
-.logo{
+    .box-icon{
+        font-size:18px;
+    }
 
-width:90px;
+    .box-name{
+        font-size:7px;
+    }
 
-height:90px;
-
-}
-
-.title{
-
-font-size:21px;
-
-}
-
-.cricket-grid{
-
-gap:5px;
-
-}
-
-.cricket-box{
-
-min-height:54px;
-
-}
-
-.box-icon{
-
-font-size:18px;
-
-}
-
-.box-name{
-
-font-size:7px;
-
-}
-
-.join-button{
-
-font-size:19px;
-
-padding:
-17px 8px;
-
-}
+    .join-button{
+        font-size:19px;
+        padding:17px 8px;
+    }
 
 }
 
@@ -1314,7 +1279,7 @@ class="logo">
 
 <div class="title">
 
-ᴊᴀɢᴀɴɴᴀɢʜ ᴛɪᴘꜱ ™⭕‼️
+ᴊᴀɢᴀɴɴᴀᴛʜ ᴛɪᴘꜱ ™⭕‼️
 
 </div>
 
@@ -1322,6 +1287,7 @@ class="logo">
 <div class="subtitle">
 
 🏏 PREMIUM CRICKET COMMUNITY
+
 <br>
 
 MATCH • TOSS • SESSION • LIVE UPDATES
@@ -1563,7 +1529,7 @@ ONLINE NOW
 </div>
 
 
-<!-- MAIN TELEGRAM BUTTON -->
+<!-- BIG TELEGRAM BUTTON -->
 
 <a
 href="https://t.me/+uWimtN5undEyYjBl"
@@ -1576,14 +1542,12 @@ class="join-button">
 
 <!-- CLICKABLE USERNAME -->
 
-<div class="telegram-link">
-
-Telegram:
+<div class="telegram-user">
 
 <a
 href="https://t.me/JAGAN_01"
 target="_blank"
-rel="noopener">
+rel="noopener noreferrer">
 
 @JAGAN_01
 
@@ -1597,9 +1561,11 @@ rel="noopener">
 <div class="countdown">
 
 Redirecting in
+
 <span id="timer">
 25
 </span>
+
 seconds
 
 </div>
@@ -1633,8 +1599,9 @@ id="joinPopup">
 
 <script>
 
+
 /* =========================
-PARTICLES
+   PARTICLES
 ========================= */
 
 const particleBox =
@@ -1679,7 +1646,7 @@ particleBox.appendChild(p);
 
 
 /* =========================
-MEMBER COUNTER
+   MEMBER COUNTER
 ========================= */
 
 let members =
@@ -1710,7 +1677,7 @@ members.toLocaleString()+
 
 
 /* =========================
-ONLINE COUNTER
+   ONLINE COUNTER
 ========================= */
 
 let online =
@@ -1742,7 +1709,7 @@ online.toLocaleString();
 
 
 /* =========================
-COUNTDOWN
+   COUNTDOWN
 ========================= */
 
 let seconds =
@@ -1784,7 +1751,7 @@ telegramURL;
 
 
 /* =========================
-JOIN POPUP
+   JOIN POPUP
 ========================= */
 
 const popup =
@@ -1849,7 +1816,7 @@ showPopup,
 
 
 /* =========================
-BUTTON CLICK
+   BUTTON CLICK
 ========================= */
 
 const button =
@@ -1879,7 +1846,7 @@ button.innerHTML =
 
 
 /* =========================
-MOBILE TOUCH
+   MOBILE TOUCH
 ========================= */
 
 let lastTouchEnd =
